@@ -1,0 +1,8 @@
+.home-titulo{
+    width: 100%;
+    height: 20em;
+    background: url('../../Images/bg-money.jpg');
+    background-size: cover;
+    background-attachment: scroll;
+    text-align: center;
+}
