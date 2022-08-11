@@ -1,0 +1,11 @@
+.cadastro-titulo{
+    width: 100%;
+    text-align: center;
+}
+
+.cadastro-ilu-style{
+    width: 15em;
+    height: auto;
+    border-radius: 100%;
+    opacity: 0.7;    
+}
