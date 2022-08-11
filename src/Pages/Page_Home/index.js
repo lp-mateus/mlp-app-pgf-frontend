@@ -1,6 +1,7 @@
 // Componentes
 import { Header } from '../../Components/Header';
 import { DefaultButton } from '../../Components/Button';
+import { Footer } from '../../Components/Footer';
 
 // CSS
 import './style.css';
@@ -50,13 +51,13 @@ export function PageHome() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis at sem sed faucibus. Fusce fermentum molestie urna, et tincidunt tellus convallis viverra.
                 </p>
                 <img src={FigureSavingPig} alt="ilustração-poupando" className="ilu-style"></img>
-            </section>
+            </section>    
 
+            <br></br>  
 
-
-            <br></br>
-
-            
+            <Footer />       
         </>
+        
     )
 }
+

@@ -1,5 +1,5 @@
 body {
-  margin: 2rem;
+  margin: 0;
   padding: 0;
   font-family: 'Roboto Mono', monospace;
   color: #2D2B2E;
@@ -33,10 +33,6 @@ h3{
   line-height: 0;
 }
 
-p{
-  color: #9CA5B2;
-}
-
 hr{
   border-width: 0.1rem;
   background-color: #000444;
@@ -45,6 +41,19 @@ hr{
 header{
   width: 100%;
   display: flex;
+}
+
+footer{
+  width: 100%;
+  background-color: #FF1744;
+  padding-bottom: 1em;
+  display: block;
+  text-align: center;
+  color: whitesmoke;
+}
+
+footer > p{
+  line-height: 0.5em;
 }
 
 nav{
@@ -82,3 +91,4 @@ li:hover{
   color: #000444;
   font-weight: bolder;
 }
+

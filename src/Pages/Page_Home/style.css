@@ -17,11 +17,18 @@
     text-align: center;
 }
 
+.home-subtitulo > p{
+    color: #b29c9c;
+}
+
 .ilu-style{
-    display: block;
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 100%;
     opacity: 0.7;    
 }
   
+
+
+
+
