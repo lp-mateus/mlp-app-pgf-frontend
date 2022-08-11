@@ -26,9 +26,31 @@ h1{
   /*background-color: #ff1745b0;*/
 }
 
+h3{
+  color: #000444;
+  font-size: 1.5em;
+  font-weight: bolder;
+  line-height: 0;
+}
+
+p{
+  color: #9CA5B2;
+}
+
+hr{
+  border-width: 0.1rem;
+  background-color: #000444;
+}
+
 header{
   width: 100%;
   display: flex;
+}
+
+nav{
+  position: fixed;
+  right: 0;
+  z-index: 999;
 }
 
 ul{
@@ -38,12 +60,13 @@ ul{
   position: absolute;
   right: 1em;
   list-style: none;
-  color: #000444;
-  font-weight: bolder;
-  font-size: 1.2em;
+  
 }
 
 li{
+  color: #FF1744;
+  font-weight: bolder;
+  font-size: 1.2em;
   line-height: 1.8em;
 }
 
