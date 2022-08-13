@@ -1,0 +1,44 @@
+.perfil-header{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #FF1744;
+}
+
+.perfil-container{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    font-weight: bolder;
+    line-height: 0;
+}
+
+.perfil-icon{
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+}
+
+.perfil-infos{
+    margin-top: 8em;
+    width: 100%;
+    height: auto;
+    background-color: #F4F6FE;
+    border-radius: 3.5rem;
+    text-align: center;
+    color: #000444;
+    font-weight: bolder;
+}
+
+.perfil-card{
+    width: fit-content;
+    margin-left: 15%;
+    font-size: 1.5em;
+}
+
+

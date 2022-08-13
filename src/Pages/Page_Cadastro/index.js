@@ -20,6 +20,8 @@ export function PageCadastro() {
             </p>
             <DefaultButton text="Login"/>       
             <br></br>
+
+            <br></br>
     
             <br></br>
             <h3>Formulário</h3>
