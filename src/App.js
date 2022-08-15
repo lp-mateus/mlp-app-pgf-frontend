@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PageHome } from './Pages/Page_Home';
 import { PageCadastro } from './Pages/Page_Cadastro';
 import { PagePerfil } from './Pages/Page_Perfil';
+import { PageMenu } from './Pages/Page_Menu';
 
 // Main function app
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<PageHome />}></Route>
           <Route path="/cadastro" element={<PageCadastro />}></Route>
           <Route path="/perfil" element={<PagePerfil />}></Route>
+          <Route path="/menu" element={<PageMenu />}></Route>
         </Routes>
     </BrowserRouter>
     </div>
@@ -26,8 +28,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
