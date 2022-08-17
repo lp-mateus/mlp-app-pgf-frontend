@@ -1,3 +1,6 @@
+// React
+import { NavLink } from "react-router-dom";
+
 // Componentes
 import { Header } from '../../Components/Header';
 import { DefaultButton } from '../../Components/Button';
@@ -21,7 +24,9 @@ export function PageHome() {
                 <div className="home-color">
                     <h1>Plataforma de Gerenciamento Financeiro</h1>
                 </div>
-                <DefaultButton text="Cadastrar"/>
+                <NavLink to='/cadastro'> 
+                    <DefaultButton text="Acessar"/>
+                </NavLink>
             </section>
 
             <br></br>

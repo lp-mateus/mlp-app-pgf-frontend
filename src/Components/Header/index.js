@@ -19,7 +19,7 @@ export function Header() {
                     <NavLink to="/" className="link-default">
                         <li>Home</li>
                     </NavLink>
-                    <NavLink to="/" className="link-default">
+                    <NavLink to="/cadastro" className="link-default">
                         <li>Cadastro</li>
                     </NavLink>
                     <NavLink to="/" className="link-default">

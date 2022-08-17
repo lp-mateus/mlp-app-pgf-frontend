@@ -31,8 +31,6 @@ export function PageCadastro() {
             </p>
             <FormCadastro />
             <br></br>
-            <DefaultButton text="Cadastro"/>       
-            <br></br>
             <div><p></p></div>
         </section>        
         </>

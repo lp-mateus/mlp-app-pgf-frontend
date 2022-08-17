@@ -1,3 +1,6 @@
+// React
+import { NavLink } from "react-router-dom";
+
 // Componentes
 import { DefaultButton } from '../../Components/Button';
 
@@ -35,7 +38,9 @@ export function PagePerfil() {
                 <DefaultButton text="Alterar"/>
                 <br></br>
                 <br></br>
-                <DefaultButton text="Menu"/>
+                <NavLink to='/menu'>
+                    <DefaultButton text="Menu"/>
+                </NavLink>
                
                 <br></br>
                 <br></br>
