@@ -1,3 +1,6 @@
+// React
+import { NavLink } from 'react-router-dom';
+
 // Components
 import { Header } from '../../Components/Header';
 import { DefaultButton } from '../../Components/Button';
@@ -18,7 +21,9 @@ export function PageCadastro() {
             <p>
                 Já possui cadastro? Realize seu login aqui
             </p>
-            <DefaultButton text="Login"/>       
+            <NavLink to='/login'>
+                <DefaultButton text="Login"/>       
+            </NavLink>
             <br></br>
 
             <br></br>

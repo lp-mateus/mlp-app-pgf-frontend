@@ -2,21 +2,12 @@
 import { useState } from 'react';
 
 // Services
-//import { getDataBase } from '../../Services/getDataBase.js';
-//import { postDataBase } from '../../Services/postDataBase.js'; 
-import { collection, addDoc } from "firebase/firestore";
-import { db } from '../../Services/firebase.js';
-
+import { postDataBase } from '../../Services/postDataBase';
 
 // Style
 import './style.css';
 
 export function FormCadastro() {
-    // Logica dos inputs do formulario
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log("submission prevented");
-    }
 
     // Declaração dos states para cada input
     const [nome, setNome] = useState("");
@@ -34,35 +25,30 @@ export function FormCadastro() {
         password: password
     }
 
-    // Firebase Service
-    // Conexão com o BD
-    const usersCollectionRef = collection(db, "users");
-    // Método POST em uma collection do BD
-    const createUser = async () => {
-        await addDoc(usersCollectionRef, dados);
-        alert("Cadastro realizado com sucesso!");
-        // Simulate an HTTP redirect:
-        window.location.replace('/menu');
+    // Método POST do forms
+    const handleCadastro = (event) => {
+        event.preventDefault();
+        postDataBase(dados);
     }
 
     return(
         <>
-        <form className="login" onSubmit={handleSubmit}>
+        <form id='form-cadastro' className="login" onSubmit={handleCadastro}>
             <label>Nome</label>
             <br></br>
-            <input required name="nome" type="text" auto-complete="name" place-holder="Insira seu nome completo..." onChange={(event) => {setNome(event.target.value)}}>
+            <input required name="nome" type="text" placeholder="Insira seu nome completo..." onChange={(event) => {setNome(event.target.value)}}>
             </input>
             <br></br>
 
             <label>CPF</label>
             <br></br>
-            <input required name="cpf" type="number" place-holder="Insria seu CPF..." onChange={(event) => {setCPF(event.target.value)}}>                    
+            <input required name="cpf" type="number" placeholder="Insria seu CPF..." onChange={(event) => {setCPF(event.target.value)}}>                    
             </input>
             <br></br>
 
             <label>E-mail</label>
             <br></br>
-            <input required name="email" type="email" auto-complete="email" place-holder="nome@email.com" onChange={(event) => {setEmail(event.target.value)}}>
+            <input required name="email" type="email" autocomplete="email" placeholder="nome@email.com" onChange={(event) => {setEmail(event.target.value)}}>
             </input>
             <br></br>
 
@@ -75,27 +61,19 @@ export function FormCadastro() {
             <label>Senha</label>
             <br></br>
             <input 
-                name="senha"
                 required
+                name="senha"                
                 type="password" 
-                minLength="8"
-                auto-complete="on"
-                place-holder="Insria uma senha..."
+                minlength="8"
+                placeholder="Insria uma senha..."
                 onChange={(event) => {setPassword(event.target.value)}}
             ></input>       
             <br></br>                         
         </form>
         <br></br>  
-        <button 
-            type='button' 
-            onClick={createUser}
-        >Cadastar</button>
+        <button type='submit' form='form-cadastro'>Cadastar</button>
         <br></br>
         </>
     )
 }
-
-
-
-
 

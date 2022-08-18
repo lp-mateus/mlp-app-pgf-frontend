@@ -10,6 +10,7 @@ import { PageHome } from './Pages/Page_Home';
 import { PageCadastro } from './Pages/Page_Cadastro';
 import { PagePerfil } from './Pages/Page_Perfil';
 import { PageMenu } from './Pages/Page_Menu';
+import { PageLogin } from   './Pages/Page_Login';
 
 // Main function app
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PageHome />}></Route>
           <Route path="/cadastro" element={<PageCadastro />}></Route>
+          <Route path="/login" element={<PageLogin />}></Route>
           <Route path="/perfil" element={<PagePerfil />}></Route>
           <Route path="/menu" element={<PageMenu />}></Route>
         </Routes>
