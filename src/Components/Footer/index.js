@@ -20,7 +20,7 @@ export function Footer() {
                 <a href="mateuspedrosa38@gmail.com">
                     <img src={GmailIcon} alt="Card Icon" style={iconResize}></img>      
                 </a> 
-                <a href="https://br.linkedin.com/in/mateus-leite-1021a716b">
+                <a href="https://www.linkedin.com/in/mateusleitepedrosa">
                     <img src={LinkedinIcon} alt="Card Icon" style={iconResize}></img>  
                 </a>                                                                    
             </div>

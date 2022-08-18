@@ -62,6 +62,7 @@ export function PageLogin() {
 
         <div style={styleCenter}>
             <button type='submit' form='form-login'>Login</button>
+            <p>Esqueci minha senha!</p>
         </div>
         <br></br>
         </>
