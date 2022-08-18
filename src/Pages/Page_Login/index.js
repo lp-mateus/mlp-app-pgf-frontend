@@ -7,18 +7,17 @@ import { getDataBase } from '../../Services/getDataBase';
 // Components
 import { Header } from '../../Components/Header';
 
+// Styles
+const styleAlign = {
+    textAlign: "center",
+}
+
+const styleCenter = {
+    width: "100%",
+    textAlign: "center"
+}
+
 export function PageLogin() {
-
-    // Styles
-    const styleAlign = {
-        textAlign: "center",
-    }
-
-    const styleCenter = {
-        width: "100%",
-        textAlign: "center"
-    }
-
     // Declaração dos states para cada input
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -68,6 +67,8 @@ export function PageLogin() {
         </>
     )
 }
+
+
 
 
 

@@ -23,6 +23,7 @@ export const getDataBase = async function(credentials) {
             localStorage.setItem("userName", doc.data().name);
             localStorage.setItem("userEmail", doc.data().email);
             localStorage.setItem("userCPF", doc.data().cpf);
+            localStorage.setItem("keyLogin", true);
 
             // mensagem
             alert("Login realizado com sucesso!");
