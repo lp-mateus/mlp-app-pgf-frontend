@@ -19,25 +19,20 @@ export function PageCadastro() {
             <h3>Bem-vindo!</h3>
             <hr></hr>
             <p>
-                Já possui cadastro? Realize seu login aqui
+                Não possui cadastro? Então preencha o nosso formulário
             </p>
+            <FormCadastro />
+
+            <p>Ou</p>
+
             <NavLink to='/login'>
                 <DefaultButton text="Login"/>       
             </NavLink>
-            <br></br>
-
-            <br></br>
-    
-            <br></br>
-            <h3>Formulário</h3>
-            <hr></hr>
-            <p>
-                Se não...Realize seu cadastro a seguir em nosso formulário!
-            </p>
-            <FormCadastro />
-            <br></br>
+            <p>Já possui uma conta? Então é só realizar seu Login</p>
             <div><p></p></div>
         </section>        
         </>
     )
 }
+
+
