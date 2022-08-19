@@ -38,9 +38,10 @@ export function PageMenu() {
 
             <br></br>
             <br></br>
+            <br></br>
 
             <div style={styleTitulo}> 
-                <h3>Opções</h3>
+                <h3>OPÇÕES</h3>
                 <hr></hr>
             </div>
 
@@ -54,7 +55,9 @@ export function PageMenu() {
                 </div>
 
                 <div className="menu-caption">
-                    <img src={IconCheck} alt="icone-check" className="menu-icons"></img>
+                    <NavLink to='/renda'>
+                        <img src={IconCheck} alt="icone-check" className="menu-icons"></img>
+                    </NavLink>
                     <p>Renda</p>
                 </div>
 

@@ -20,6 +20,7 @@ export const getDataBase = async function(credentials) {
             console.log(`${doc.id} => ${doc.data()}`);
 
             // salvando dados no local storage
+            localStorage.setItem("userID", doc.id);
             localStorage.setItem("userName", doc.data().name);
             localStorage.setItem("userEmail", doc.data().email);
             localStorage.setItem("userCPF", doc.data().cpf);
