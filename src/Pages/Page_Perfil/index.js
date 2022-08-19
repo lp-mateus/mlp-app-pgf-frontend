@@ -21,9 +21,10 @@ export function PagePerfil() {
                     <p>Olá, bem-vindo de volta!</p>  
                     <img src={IconUser} alt="icone-usuario"></img>            
                 </div>
-                <br></br>
+                <br></br>   
+                <br></br>   
+                <br></br>  
                 <h1>PERFIL</h1>
-                <br></br>
             </section>
             <br></br>
             <section className="perfil-infos">

@@ -5,12 +5,14 @@
 // Bibliotecas
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-// Paginas
+// Rotas publicas
 import { PageHome } from './Pages/Page_Home';
 import { PageCadastro } from './Pages/Page_Cadastro';
+import { PageLogin } from   './Pages/Page_Login';
+// Rotas privadas
 import { PagePerfil } from './Pages/Page_Perfil';
 import { PageMenu } from './Pages/Page_Menu';
-import { PageLogin } from   './Pages/Page_Login';
+import { PageRenda } from   './Pages/Page_Renda';
 
 // Main function app
 function App() {
@@ -24,6 +26,7 @@ function App() {
           <Route path="/login" element={<PageLogin />}></Route>
           <Route path="/menu" element={<PageMenu />}></Route>
           <Route path="/perfil" element={<PagePerfil />}></Route>
+          <Route path="/renda" element={<PageRenda />}></Route>
         </Routes>
     </BrowserRouter>
     </div>
