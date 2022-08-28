@@ -10,8 +10,14 @@ import { Footer } from '../../Components/Footer';
 import './style.css';
 import FigureSavingPig from '../../Images/ilu-savingmoney.jpg';
 
+// Style
+/*
+const styleCentralize = {
+    width: '100%',
+    textAlign: 'center'
+}*/
+
 export function PageHome() {
-    // Metódos
 
     return(
         <> 
@@ -21,18 +27,18 @@ export function PageHome() {
                 <br></br>
                 <br></br>
                 <br></br>
-                <div className="home-color">
-                    <h1>Plataforma de Gerenciamento Financeiro</h1>
-                </div>
-                <NavLink to='/cadastro'> 
-                    <DefaultButton text="Acessar"/>
+                <br></br>
+                <br></br>
+                <br></br>
+                <NavLink to='/cadastro'>
+                    <DefaultButton text='ACESSAR'/>
                 </NavLink>
             </section>
 
             <br></br>
 
             <section className="home-subtitulo">
-                <h3>Poupança</h3>
+                <h3>POUPANÇA</h3>
                 <hr></hr>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis at sem sed faucibus. Fusce fermentum molestie urna, et tincidunt tellus convallis viverra.
@@ -41,7 +47,7 @@ export function PageHome() {
             </section>
 
             <section className="home-subtitulo">
-                <h3>Poupança</h3>
+                <h3>CONTROLE</h3>
                 <hr></hr>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis at sem sed faucibus. Fusce fermentum molestie urna, et tincidunt tellus convallis viverra.
@@ -50,7 +56,7 @@ export function PageHome() {
             </section>
 
             <section className="home-subtitulo">
-                <h3>Poupança</h3>
+                <h3>FACILIDADE</h3>
                 <hr></hr>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis at sem sed faucibus. Fusce fermentum molestie urna, et tincidunt tellus convallis viverra.
