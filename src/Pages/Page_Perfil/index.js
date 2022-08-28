@@ -17,7 +17,8 @@ export function PagePerfil() {
     return(
         <>
             <section className="perfil-header">
-                <div className="perfil-container">                    
+                <div className="perfil-container">   
+                    <p>PGFMLP</p>                   
                     <p>Olá, bem-vindo de volta!</p>  
                     <img src={IconUser} alt="icone-usuario"></img>            
                 </div>
@@ -36,11 +37,11 @@ export function PagePerfil() {
                 <p>Nome: {session_user_name}</p>
                 <p>CPF: {session_user_cpf}</p>
                 <br></br>
-                <DefaultButton text="Alterar"/>
+                <DefaultButton text="ALTERAR"/>
                 <br></br>
                 <br></br>
                 <NavLink to='/menu'>
-                    <DefaultButton text="Menu"/>
+                    <DefaultButton text="MENU"/>
                 </NavLink>
                 <br></br>
                 <br></br>

@@ -48,7 +48,7 @@ export function PageRenda() {
         <>
             <section className="perfil-header">
                 <div className="perfil-container">
-                    <p>Conta de acesso</p>
+                    <p>PGFMLP</p>
                     <p>{session_user_email}</p>       
                     <p>{session_user_cpf}</p>    
                 </div>                         
@@ -76,7 +76,7 @@ export function PageRenda() {
             </form>
             <br></br>
             <div style={styleCenter}>
-                <button type='submit' form='form-renda'>Adicionar</button>
+                <button type='submit' form='form-renda'>ADICIONAR</button>
             </div>
         </>
     )

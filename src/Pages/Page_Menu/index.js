@@ -26,7 +26,7 @@ export function PageMenu() {
         <>
             <section className="perfil-header">
                 <div className="perfil-container">
-                    <p>Conta de acesso</p>
+                    <p>PGFMLP</p>
                     <p>{session_user_email}</p>       
                     <p>{session_user_cpf}</p>    
                 </div>                         
