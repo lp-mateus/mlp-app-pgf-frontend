@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Services
-import { postDataBaseFinanceiro } from "../../Services/postDataBaseFinanceiro";
+//import { postDataBaseFinanceiro } from "../../Services/postDataBaseFinanceiro";
 
 // Styles
 const styleTitulo = {
@@ -16,7 +16,7 @@ const styleCenter = {
     textAlign: "center"
 }
 
-export function PageRenda() {
+export function PageDespesa() {
     // Recuperando dos dados localstorage
     const session_user_ID = localStorage.getItem('userID');
     const session_user_email = localStorage.getItem('userEmail');
@@ -41,7 +41,7 @@ export function PageRenda() {
         }
 
         // serviço firebase
-        postDataBaseFinanceiro(dados);
+        //postDataBaseFinanceiro(dados);
     }
 
     return(
@@ -55,7 +55,7 @@ export function PageRenda() {
                 <br></br>   
                 <br></br>   
                 <br></br>   
-                <h1>RENDA</h1>
+                <h1>DESPESA</h1>
             </section>
 
             <br></br>
@@ -68,9 +68,9 @@ export function PageRenda() {
             </div>
 
             <form id='form-renda' className="login" onSubmit={handleSubmit}>
-                <label>Adicione sua renda mensal</label>
+                <label>Adicione o valor da dispesa</label>
                 <br></br>
-                <input required name="renda" type="number" placeholder="Exemplo: R$1500,00" onChange={(event) => {setRenda(event.target.value)}}>
+                <input required name="renda" type="number" placeholder="Exemplo: R$250,00" onChange={(event) => {setRenda(event.target.value)}}>
                 </input>
                 <br></br>                       
             </form>

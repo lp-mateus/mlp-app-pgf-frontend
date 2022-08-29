@@ -67,7 +67,9 @@ export function PageMenu() {
                 </div>
 
                 <div className="menu-caption">
-                    <img src={IconCancel} alt="icone-cancelar" className="menu-icons"></img>
+                    <NavLink to='/despesa'> 
+                        <img src={IconCancel} alt="icone-cancelar" className="menu-icons"></img>
+                    </NavLink>
                     <p>Despesa</p>
                 </div>
                 <br></br>
