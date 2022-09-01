@@ -18,17 +18,11 @@ const styleTitulo = {
 }
 
 export function PageMenu() {
-    // Recuperando dos dados localstorage
-    const session_user_email = localStorage.getItem('userEmail');
-    const session_user_cpf = localStorage.getItem('userCPF');
-
     return(
         <>
             <section className="perfil-header">
                 <div className="perfil-container">
                     <p>PGFMLP</p>
-                    <p>{session_user_email}</p>       
-                    <p>{session_user_cpf}</p>    
                 </div>                         
                 <br></br>   
                 <br></br>   

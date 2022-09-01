@@ -19,8 +19,6 @@ const styleCenter = {
 export function PageDespesa() {
     // Recuperando dos dados localstorage
     const session_user_ID = localStorage.getItem('userID');
-    const session_user_email = localStorage.getItem('userEmail');
-    const session_user_cpf = localStorage.getItem('userCPF');
 
     // Tratando inputs do formulário
     const [despesa, setDespesa] = useState(0);
@@ -38,7 +36,7 @@ export function PageDespesa() {
         const dados = {
             userID: session_user_ID,
             description: description,
-            despesa: Number(despesa),
+            valor: Number(despesa),
             data: String(today),
         }
 
@@ -50,9 +48,7 @@ export function PageDespesa() {
         <>
             <section className="perfil-header">
                 <div className="perfil-container">
-                    <p>PGFMLP</p>
-                    <p>{session_user_email}</p>       
-                    <p>{session_user_cpf}</p>    
+                    <p>PGFMLP</p>  
                 </div>                         
                 <br></br>   
                 <br></br>   

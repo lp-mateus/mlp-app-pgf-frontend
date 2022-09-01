@@ -17,10 +17,6 @@ const styleCenter = {
 }
 
 export function PageRenda() {
-    // Recuperando dos dados localstorage
-    const session_user_email = localStorage.getItem('userEmail');
-    const session_user_cpf = localStorage.getItem('userCPF');
-
     // Tratando inputs do formulário
     const [renda, setRenda] = useState(0);
 
@@ -41,9 +37,7 @@ export function PageRenda() {
         <>
             <section className="perfil-header">
                 <div className="perfil-container">
-                    <p>PGFMLP</p>
-                    <p>{session_user_email}</p>       
-                    <p>{session_user_cpf}</p>    
+                    <p>PGFMLP</p> 
                 </div>                         
                 <br></br>   
                 <br></br>   

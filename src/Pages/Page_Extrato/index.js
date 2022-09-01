@@ -1,11 +1,19 @@
 // React
-//import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 // Services
-import { getDataBaseExtrato } from "../../Services/getDataBaseExtrato";
+import { getDataBaseRenda } from '../../Services/getDataBaseRenda.js';
+import { getDataBaseDespesa } from "../../Services/getDataBaseDespesa.js";
 
 export function PageExtrato() {
-    // Métodos
+
+    // Hooks
+    useEffect(() => {
+        // Services
+        getDataBaseRenda();
+        getDataBaseDespesa();
+    });
+
     return(
         <>
             <section className="perfil-header">
@@ -22,13 +30,11 @@ export function PageExtrato() {
                 <br></br>
                 <h3>INFORMAÇÕES</h3>
                 <hr></hr>
-                <p>E-mail:</p>
+                <p>Extrato:</p>
                 <br></br>   
-                <button onClick={getDataBaseExtrato}>GETRENDA</button>
+                
             </section>
         </>
     )
 }
-
-
 

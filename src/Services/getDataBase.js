@@ -36,5 +36,3 @@ export const getDataBase = async function(credentials) {
 
 
 
-
-
