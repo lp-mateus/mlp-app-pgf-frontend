@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Services
-//import { postDataBaseFinanceiro } from "../../Services/postDataBaseFinanceiro";
+import { postDataBaseDespesa } from "../../Services/postDataBaseDespesa";
 
 // Styles
 const styleTitulo = {
@@ -23,7 +23,8 @@ export function PageDespesa() {
     const session_user_cpf = localStorage.getItem('userCPF');
 
     // Tratando inputs do formulário
-    const [renda, setRenda] = useState(0);
+    const [despesa, setDespesa] = useState(0);
+    const [description, setDescription] = useState("");
 
     // Método POST do forms
     const handleSubmit = (event) => {
@@ -36,12 +37,13 @@ export function PageDespesa() {
         // prototipa dados do input
         const dados = {
             userID: session_user_ID,
-            renda: renda,
+            description: description,
+            despesa: Number(despesa),
             data: String(today),
         }
 
         // serviço firebase
-        //postDataBaseFinanceiro(dados);
+        postDataBaseDespesa(dados);
     }
 
     return(
@@ -68,9 +70,14 @@ export function PageDespesa() {
             </div>
 
             <form id='form-renda' className="login" onSubmit={handleSubmit}>
-                <label>Adicione o valor da dispesa</label>
+                <label>Descrição da dispesa</label>
                 <br></br>
-                <input required name="renda" type="number" placeholder="Exemplo: R$250,00" onChange={(event) => {setRenda(event.target.value)}}>
+                <input required name="description" type="string" placeholder="Exemplo: Conta de água" onChange={(event) => {setDescription(event.target.value)}}>
+                </input>
+                <br></br>  
+                <label>Insira o valor da dispesa</label>
+                <br></br>
+                <input required name="despesa" type="number" placeholder="Exemplo: R$250,00" onChange={(event) => {setDespesa(event.target.value)}}>
                 </input>
                 <br></br>                       
             </form>

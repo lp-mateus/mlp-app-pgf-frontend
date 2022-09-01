@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Services
-import { postDataBaseFinanceiro } from "../../Services/postDataBaseFinanceiro";
+import { postDataBaseRenda } from "../../Services/postDataBaseRenda";
 
 // Styles
 const styleTitulo = {
@@ -18,7 +18,6 @@ const styleCenter = {
 
 export function PageRenda() {
     // Recuperando dos dados localstorage
-    const session_user_ID = localStorage.getItem('userID');
     const session_user_email = localStorage.getItem('userEmail');
     const session_user_cpf = localStorage.getItem('userCPF');
 
@@ -28,20 +27,14 @@ export function PageRenda() {
     // Método POST do forms
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        // captura data atual do submit
-        let today = new Date();
-        today = today.toLocaleDateString();
         
         // prototipa dados do input
         const dados = {
-            userID: session_user_ID,
-            renda: renda,
-            data: String(today),
+            renda: Number(renda)
         }
 
         // serviço firebase
-        postDataBaseFinanceiro(dados);
+        postDataBaseRenda(dados);
     }
 
     return(
@@ -68,7 +61,7 @@ export function PageRenda() {
             </div>
 
             <form id='form-renda' className="login" onSubmit={handleSubmit}>
-                <label>Adicione sua renda mensal</label>
+                <label>Insira o valor da sua renda mensal</label>
                 <br></br>
                 <input required name="renda" type="number" placeholder="Exemplo: R$1500,00" onChange={(event) => {setRenda(event.target.value)}}>
                 </input>
@@ -81,9 +74,5 @@ export function PageRenda() {
         </>
     )
 }
-
-
-
-
 
 
