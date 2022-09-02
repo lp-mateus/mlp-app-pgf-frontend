@@ -20,9 +20,9 @@ export const getDataBaseDespesa = async () => {
     });
 
     // Salvando localStorage
-    //localStorage.setItem('userDespesas', result);
-
+    localStorage.setItem('userDespesas', JSON.stringify(result));
 }
+
 
 
 
