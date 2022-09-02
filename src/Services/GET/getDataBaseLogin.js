@@ -1,11 +1,11 @@
 // Firebase
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from './firebase.js';
+import { db } from '../Configuration/firebase.js';
 
 // método GET em uma collection do BD
-export const getDataBase = async function(credentials) {
+export const getDataBaseLogin = async function(email,password) {
     // conexão com o BD
-    const queryCollection = query(collection(db, "users"), where("email", "==", credentials));
+    const queryCollection = query(collection(db, "users"), where("email", "==", email), where("password", "==", password));
 
     // requisição ao BD
     const request = await getDocs(queryCollection);
@@ -33,6 +33,3 @@ export const getDataBase = async function(credentials) {
         })
     }
 }
-
-
-

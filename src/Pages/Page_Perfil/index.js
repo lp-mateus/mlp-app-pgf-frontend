@@ -1,12 +1,15 @@
 // React
 import { NavLink } from "react-router-dom";
 
-// Componentes
-import { DefaultButton } from '../../Components/Button';
-
 // CSS
 import './style.css';
 import IconUser from '../../Images/profile.png';
+
+// Style
+const styleCenter = {
+    width: "100%",
+    textAlign: "center"
+}
 
 export function PagePerfil() {
     // Recuperando dos dados localstorage
@@ -22,9 +25,9 @@ export function PagePerfil() {
                     <p>Olá, bem-vindo de volta!</p>  
                     <img src={IconUser} alt="icone-usuario"></img>            
                 </div>
-                <br></br>   
-                <br></br>   
                 <br></br>  
+                <br></br>
+                <br></br> 
                 <h1>PERFIL</h1>
             </section>
             <br></br>
@@ -35,20 +38,17 @@ export function PagePerfil() {
                 <br></br>
                 <p>E-mail: {session_user_email}</p>
                 <p>Nome: {session_user_name}</p>
-                <p>CPF: {session_user_cpf}</p>
-                <br></br>
-                <DefaultButton text="ALTERAR"/>
-                <br></br>
-                <br></br>
-                <NavLink to='/menu'>
-                    <DefaultButton text="MENU"/>
-                </NavLink>
+                <p>CPF: {session_user_cpf}</p>                
                 <br></br>
                 <br></br>
                 <br></br>                
             </section>
+            <br></br>
+            <div style={styleCenter}>
+                <NavLink to="/menu">
+                    <button>MENU</button>
+                </NavLink>
+            </div>
         </>
     )
 }
-
-

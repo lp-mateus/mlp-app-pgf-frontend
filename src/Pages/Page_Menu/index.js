@@ -25,8 +25,6 @@ export function PageMenu() {
                     <p>PGFMLP</p>
                 </div>                         
                 <br></br>   
-                <br></br>   
-                <br></br>   
                 <h1>MENU</h1>
             </section>
 
@@ -73,6 +71,3 @@ export function PageMenu() {
         </>
     )
 }
-
-
-

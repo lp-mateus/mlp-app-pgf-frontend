@@ -1,9 +1,9 @@
 // Firebase
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../Configuration/firebase.js";
 
 // Método POST em uma collection do BD
-export const postDataBase = async function(dados) {
+export const postDataBaseCadastro = async function(dados) {
     // Conexão com o BD
     const collectionRef = collection(db, "users");
 
@@ -15,5 +15,3 @@ export const postDataBase = async function(dados) {
     alert("Cadastro realizado com sucesso!");
     window.location.replace('/menu');
 }
-
-

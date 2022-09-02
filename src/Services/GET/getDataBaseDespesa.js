@@ -1,5 +1,5 @@
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from './firebase.js';
+import { db } from '../Configuration/firebase.js';
 
 // Método GET collection (DESPESA) userID
 export const getDataBaseDespesa = async () => {
@@ -22,7 +22,3 @@ export const getDataBaseDespesa = async () => {
     // Salvando localStorage
     localStorage.setItem('userDespesas', JSON.stringify(result));
 }
-
-
-
-

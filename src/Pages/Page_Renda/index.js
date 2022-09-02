@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Services
-import { postDataBaseRenda } from "../../Services/postDataBaseRenda";
+import { postDataBaseRenda } from "../../Services/POST/postDataBaseRenda.js";
 
 // Styles
 const styleTitulo = {
@@ -39,9 +39,7 @@ export function PageRenda() {
                 <div className="perfil-container">
                     <p>PGFMLP</p> 
                 </div>                         
-                <br></br>   
-                <br></br>   
-                <br></br>   
+                <br></br>    
                 <h1>RENDA</h1>
             </section>
 
@@ -68,5 +66,3 @@ export function PageRenda() {
         </>
     )
 }
-
-

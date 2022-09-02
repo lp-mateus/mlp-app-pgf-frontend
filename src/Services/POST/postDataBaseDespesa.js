@@ -1,6 +1,6 @@
 // Firebase
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../Configuration/firebase.js";
 
 // Método POST na collection (despesa) funcionalidade adicionar despesa
 export const postDataBaseDespesa = async function(dados) {
@@ -15,4 +15,3 @@ export const postDataBaseDespesa = async function(dados) {
     alert("Despesa adicionada com sucesso!");
     window.location.replace('/menu');
 }
-

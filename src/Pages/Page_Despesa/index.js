@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Services
-import { postDataBaseDespesa } from "../../Services/postDataBaseDespesa";
+import { postDataBaseDespesa } from "../../Services/POST/postDataBaseDespesa.js";
 
 // Styles
 const styleTitulo = {
@@ -50,9 +50,7 @@ export function PageDespesa() {
                 <div className="perfil-container">
                     <p>PGFMLP</p>  
                 </div>                         
-                <br></br>   
-                <br></br>   
-                <br></br>   
+                <br></br>    
                 <h1>DESPESA</h1>
             </section>
 
@@ -84,9 +82,3 @@ export function PageDespesa() {
         </>
     )
 }
-
-
-
-
-
-

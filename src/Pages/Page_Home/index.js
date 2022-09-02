@@ -10,13 +10,6 @@ import { Footer } from '../../Components/Footer';
 import './style.css';
 import FigureSavingPig from '../../Images/ilu-savingmoney.jpg';
 
-// Style
-/*
-const styleCentralize = {
-    width: '100%',
-    textAlign: 'center'
-}*/
-
 export function PageHome() {
 
     return(
@@ -71,4 +64,3 @@ export function PageHome() {
         
     )
 }
-

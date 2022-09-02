@@ -1,5 +1,5 @@
 // Projeto: Plataforma de Gerenciamento Financeiro
-// MLP Digital House 
+// MLP Software House
 // Data: 02/2022
 
 // Bibliotecas
@@ -38,4 +38,3 @@ function App() {
 }
 
 export default App;
-

@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 
 // Services
-import { getDataBaseRenda } from '../../Services/getDataBaseRenda.js';
-import { getDataBaseDespesa } from "../../Services/getDataBaseDespesa.js";
+import { getDataBaseRenda } from '../../Services/GET/getDataBaseRenda.js';
+import { getDataBaseDespesa } from "../../Services/GET/getDataBaseDespesa.js";
 
 const styleDivisor = {
     border: "2px solid whitesmoke",
@@ -35,7 +35,7 @@ export function PageExtrato() {
 
     // Hook useEffect
     useEffect(() => {
-        // Assincronismo
+        // services
         const servicesExtrato = async () => {
             // Request
             await getDataBaseRenda();
@@ -63,14 +63,12 @@ export function PageExtrato() {
                     <p>PGFMLP</p>                             
                 </div>
                 <br></br>   
-                <br></br>   
-                <br></br>  
                 <h1>EXTRATO</h1>
             </section>
             <br></br>
             <section className="perfil-infos">
                 <br></br>
-                <h3>DESPESAS RECENTES</h3>
+                <h3>VISUALIZAR DESPESAS RECENTES</h3>
                 <hr></hr>
 
                 <br></br>
@@ -107,8 +105,8 @@ export function PageExtrato() {
                 </section>
 
                 <br></br>
+                
             </section>
         </>
     )
 }
-

@@ -1,6 +1,6 @@
 // Firebase
 import { doc, updateDoc } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../Configuration/firebase.js";
 
 // Método UPDATE na collection (users) funcionalidade adicionar renda mensal
 export const postDataBaseRenda = async function(dados) {
@@ -16,4 +16,3 @@ export const postDataBaseRenda = async function(dados) {
     alert("Renda mensal adicionada com sucesso!");
     window.location.replace('/menu');
 }
-

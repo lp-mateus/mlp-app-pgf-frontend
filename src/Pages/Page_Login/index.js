@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 // Services
-import { getDataBase } from '../../Services/getDataBase';
+import { getDataBaseLogin } from '../../Services/GET/getDataBaseLogin.js';
 
 // Components
 import { Header } from '../../Components/Header';
@@ -24,7 +24,7 @@ export function PageLogin() {
 
     const handleLogin = (event) => {
         event.preventDefault();
-        getDataBase(email);
+        getDataBaseLogin(email,password);
     }
 
     return(
@@ -68,8 +68,3 @@ export function PageLogin() {
         </>
     )
 }
-
-
-
-
-
