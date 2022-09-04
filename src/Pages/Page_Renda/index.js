@@ -2,13 +2,12 @@
 import { useState } from "react";
 
 // Services
-import { postDataBaseFinanceiro } from "../../Services/postDataBaseFinanceiro";
+import { postDataBaseRenda } from "../../Services/POST/postDataBaseRenda.js";
 
 // Styles
 const styleTitulo = {
     width: "100%",
-    marginTop: "8em",
-    textAlign: "center",
+    textAlign: "center"
 }
 
 const styleCenter = {
@@ -17,73 +16,55 @@ const styleCenter = {
 }
 
 export function PageRenda() {
-    // Recuperando dos dados localstorage
-    const session_user_ID = localStorage.getItem('userID');
-    const session_user_email = localStorage.getItem('userEmail');
-    const session_user_cpf = localStorage.getItem('userCPF');
-
     // Tratando inputs do formulário
     const [renda, setRenda] = useState(0);
 
     // Método POST do forms
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        // captura data atual do submit
-        let today = new Date();
-        today = today.toLocaleDateString();
         
         // prototipa dados do input
         const dados = {
-            userID: session_user_ID,
-            renda: renda,
-            data: String(today),
+            renda: Number(renda)
         }
 
         // serviço firebase
-        postDataBaseFinanceiro(dados);
+        postDataBaseRenda(dados);
     }
 
     return(
         <>
             <section className="perfil-header">
                 <div className="perfil-container">
-                    <p>PGFMLP</p>
-                    <p>{session_user_email}</p>       
-                    <p>{session_user_cpf}</p>    
+                    <p>PGFMLP</p> 
                 </div>                         
-                <br></br>   
-                <br></br>   
-                <br></br>   
+                <br></br>    
                 <h1>RENDA</h1>
             </section>
 
             <br></br>
-            <br></br>
-            <br></br>
 
-            <div style={styleTitulo}> 
-                <h3>INFORMAÇÕES</h3>
-                <hr></hr>
-            </div>
-
-            <form id='form-renda' className="login" onSubmit={handleSubmit}>
-                <label>Adicione sua renda mensal</label>
+            <section className="perfil-infos">
                 <br></br>
-                <input required name="renda" type="number" placeholder="Exemplo: R$1500,00" onChange={(event) => {setRenda(event.target.value)}}>
-                </input>
-                <br></br>                       
-            </form>
+                <div style={styleTitulo}> 
+                        <h3>INFORMAÇÕES</h3>
+                        <hr></hr>
+                </div>
+
+                <form id='form-renda' className="login" onSubmit={handleSubmit}>
+                    <label>Insira o valor da sua renda mensal</label>
+                    <br></br>
+                    <input required name="renda" type="number" placeholder="Exemplo: R$1500,00" onChange={(event) => {setRenda(event.target.value)}}>
+                    </input>
+                    <br></br>                       
+                </form>
+            </section>
+
             <br></br>
+
             <div style={styleCenter}>
                 <button type='submit' form='form-renda'>ADICIONAR</button>
             </div>
         </>
     )
 }
-
-
-
-
-
-

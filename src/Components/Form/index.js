@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 // Services
-import { postDataBase } from '../../Services/postDataBase';
+import { postDataBaseCadastro } from '../../Services/POST/postDataBaseCadastro.js';
 
 // Style
 import './style.css';
@@ -20,7 +20,7 @@ export function FormCadastro() {
     const dados = {
         name: nome,
         email: email,
-        cpf: Number(cpf),
+        cpf: String(cpf),
         birth: datebirth,
         password: password
     }
@@ -28,7 +28,7 @@ export function FormCadastro() {
     // Método POST do forms
     const handleCadastro = (event) => {
         event.preventDefault();
-        postDataBase(dados);
+        postDataBaseCadastro(dados);
     }
 
     return(

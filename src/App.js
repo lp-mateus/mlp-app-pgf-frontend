@@ -1,5 +1,5 @@
 // Projeto: Plataforma de Gerenciamento Financeiro
-// MLP Digital House 
+// MLP Software House
 // Data: 02/2022
 
 // Bibliotecas
@@ -14,6 +14,7 @@ import { PagePerfil } from './Pages/Page_Perfil';
 import { PageMenu } from './Pages/Page_Menu';
 import { PageRenda } from   './Pages/Page_Renda';
 import { PageDespesa } from   './Pages/Page_Despesa';
+import { PageExtrato } from   './Pages/Page_Extrato';
 
 // Main function app
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/perfil" element={<PagePerfil />}></Route>
           <Route path="/renda" element={<PageRenda />}></Route>
           <Route path="/despesa" element={<PageDespesa />}></Route>
+          <Route path="/extrato" element={<PageExtrato />}></Route>
         </Routes>
     </BrowserRouter>
     </div>
@@ -36,4 +38,3 @@ function App() {
 }
 
 export default App;
-

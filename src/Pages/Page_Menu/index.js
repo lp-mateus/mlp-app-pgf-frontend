@@ -18,26 +18,16 @@ const styleTitulo = {
 }
 
 export function PageMenu() {
-    // Recuperando dos dados localstorage
-    const session_user_email = localStorage.getItem('userEmail');
-    const session_user_cpf = localStorage.getItem('userCPF');
-
     return(
         <>
             <section className="perfil-header">
                 <div className="perfil-container">
                     <p>PGFMLP</p>
-                    <p>{session_user_email}</p>       
-                    <p>{session_user_cpf}</p>    
                 </div>                         
-                <br></br>   
-                <br></br>   
                 <br></br>   
                 <h1>MENU</h1>
             </section>
 
-            <br></br>
-            <br></br>
             <br></br>
 
             <div style={styleTitulo}> 
@@ -62,7 +52,9 @@ export function PageMenu() {
                 </div>
 
                 <div className="menu-caption">
-                    <img src={IconStats} alt="icone-status" className="menu-icons"></img>
+                    <NavLink to='/extrato'>
+                        <img src={IconStats} alt="icone-status" className="menu-icons"></img>
+                    </NavLink>
                     <p>Extrato</p>
                 </div>
 
@@ -77,6 +69,3 @@ export function PageMenu() {
         </>
     )
 }
-
-
-
