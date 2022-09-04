@@ -7,8 +7,7 @@ import { postDataBaseRenda } from "../../Services/POST/postDataBaseRenda.js";
 // Styles
 const styleTitulo = {
     width: "100%",
-    marginTop: "8em",
-    textAlign: "center",
+    textAlign: "center"
 }
 
 const styleCenter = {
@@ -44,22 +43,25 @@ export function PageRenda() {
             </section>
 
             <br></br>
-            <br></br>
-            <br></br>
 
-            <div style={styleTitulo}> 
-                <h3>INFORMAÇÕES</h3>
-                <hr></hr>
-            </div>
-
-            <form id='form-renda' className="login" onSubmit={handleSubmit}>
-                <label>Insira o valor da sua renda mensal</label>
+            <section className="perfil-infos">
                 <br></br>
-                <input required name="renda" type="number" placeholder="Exemplo: R$1500,00" onChange={(event) => {setRenda(event.target.value)}}>
-                </input>
-                <br></br>                       
-            </form>
+                <div style={styleTitulo}> 
+                        <h3>INFORMAÇÕES</h3>
+                        <hr></hr>
+                </div>
+
+                <form id='form-renda' className="login" onSubmit={handleSubmit}>
+                    <label>Insira o valor da sua renda mensal</label>
+                    <br></br>
+                    <input required name="renda" type="number" placeholder="Exemplo: R$1500,00" onChange={(event) => {setRenda(event.target.value)}}>
+                    </input>
+                    <br></br>                       
+                </form>
+            </section>
+
             <br></br>
+
             <div style={styleCenter}>
                 <button type='submit' form='form-renda'>ADICIONAR</button>
             </div>

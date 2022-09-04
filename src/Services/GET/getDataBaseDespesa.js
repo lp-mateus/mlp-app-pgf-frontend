@@ -13,10 +13,9 @@ export const getDataBaseDespesa = async () => {
     // Request
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
         // retorna informações de despesa
         result.push(doc.data());
-        console.log("Resultado:", result);
     });
 
     // Salvando localStorage

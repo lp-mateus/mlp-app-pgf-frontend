@@ -11,7 +11,7 @@ export const getDataBaseRenda = async () => {
     // Request
     const request = await getDoc(docRef);
     if (request.exists()) {
-        console.log("Document data:", request.data().renda);
+        //console.log("Document data:", request.data().renda);
         localStorage.setItem('userRenda', request.data().renda);
     } else {
         console.log("No such document!");

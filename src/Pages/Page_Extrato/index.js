@@ -1,9 +1,14 @@
 // React
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // Services
 import { getDataBaseRenda } from '../../Services/GET/getDataBaseRenda.js';
 import { getDataBaseDespesa } from "../../Services/GET/getDataBaseDespesa.js";
+
+const styleCenter = {
+    width: "100%",
+    textAlign: "center"
+}
 
 const styleDivisor = {
     border: "2px solid whitesmoke",
@@ -33,28 +38,21 @@ export function PageExtrato() {
     const [renda, setRenda] = useState(0);
     const [despesa, setDespesa] = useState([0]);
 
-    // Hook useEffect
-    useEffect(() => {
-        // services
-        const servicesExtrato = async () => {
-            // Request
-            await getDataBaseRenda();
-            await getDataBaseDespesa();
+    // services
+    const servicesExtrato = () => {
+        // Request
+        getDataBaseRenda();
+        getDataBaseDespesa();
 
-            // Updates states
-            setRenda(
-                localStorage.getItem('userRenda')
-            );
+        // Update states
+        setRenda(
+            localStorage.getItem('userRenda')
+        );
 
-            setDespesa(
-                JSON.parse(localStorage.getItem('userDespesas'))
-            );
-        }
-
-        // Main
-        servicesExtrato();
-        
-    });
+        setDespesa(
+            JSON.parse(localStorage.getItem('userDespesas'))
+        );
+    }
 
     return(
         <>
@@ -68,7 +66,7 @@ export function PageExtrato() {
             <br></br>
             <section className="perfil-infos">
                 <br></br>
-                <h3>VISUALIZAR DESPESAS RECENTES</h3>
+                <h3>DESPESAS RECENTES</h3>
                 <hr></hr>
 
                 <br></br>
@@ -105,8 +103,12 @@ export function PageExtrato() {
                 </section>
 
                 <br></br>
-                
             </section>
+            <br></br>
+            <div style={styleCenter}>
+                <button onClick={servicesExtrato}>VER DESPESAS</button>
+            </div>
+            <br></br>
         </>
     )
 }

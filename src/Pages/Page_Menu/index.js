@@ -29,8 +29,6 @@ export function PageMenu() {
             </section>
 
             <br></br>
-            <br></br>
-            <br></br>
 
             <div style={styleTitulo}> 
                 <h3>OPÇÕES</h3>

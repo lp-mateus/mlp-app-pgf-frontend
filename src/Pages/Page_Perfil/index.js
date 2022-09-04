@@ -30,7 +30,9 @@ export function PagePerfil() {
                 <br></br> 
                 <h1>PERFIL</h1>
             </section>
+
             <br></br>
+
             <section className="perfil-infos">
                 <br></br>
                 <h3>INFORMAÇÕES</h3>

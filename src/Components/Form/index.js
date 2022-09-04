@@ -20,7 +20,7 @@ export function FormCadastro() {
     const dados = {
         name: nome,
         email: email,
-        cpf: Number(cpf),
+        cpf: String(cpf),
         birth: datebirth,
         password: password
     }
